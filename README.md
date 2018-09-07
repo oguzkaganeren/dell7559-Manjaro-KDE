@@ -1,4 +1,5 @@
 # dell7559-Manjaro-KDE
+![Screen](https://github.com/oguzkaganeren/dell7559-Manjaro-KDE/blob/master/Screenshot_20180907_205429.png)
 Install manjaro-kde-17.1.11-stable-x86_64 or new version.
 ```
 sudo nano /etc/default/grub 
