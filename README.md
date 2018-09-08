@@ -75,3 +75,5 @@ plugins=(
   zsh-autosuggestions
   tmux-plugin
 )
+## For Backup
+sudo pacman -S timeshift
