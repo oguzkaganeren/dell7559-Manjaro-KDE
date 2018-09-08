@@ -73,5 +73,5 @@ plugins=(
   git-flow
   sudo
   zsh-autosuggestions
-  tmux
+  tmux-plugin
 )
