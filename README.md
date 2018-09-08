@@ -40,3 +40,34 @@ sudo gedit /etc/hosts
 sudo pacman -S arc-kde kvantum-theme-arc
 ```
 Open Kvantum manager and change theme with arc theme. After that change theme with kvantum at settings.
+
+### For Oh-my-Zsh
+```
+sudo pacman -S zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+yaourt -S powerline-fonts-git  
+git clone https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
+cd oh-my-zsh-powerline-theme
+./install_in_omz.sh  
+```
+Change bash your Konsole in Settings>Conf. Konsole
+```
+
+sudo gedit ~/.zshrc
+```
+ZSH_THEME="powerline"
+plugins=(
+  git
+  cp
+  extract
+  history
+  autojump
+  gradle
+  node
+  npm
+  git-flow
+  sudo
+  zsh-autosuggestions
+  tmux
+)
