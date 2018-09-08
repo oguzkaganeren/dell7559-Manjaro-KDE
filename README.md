@@ -36,6 +36,7 @@ sudo gedit /etc/fstab
 ```
 UUID=DAF6FE7CF6FE5869 /run/media/oguz/D ntfs-3g defaults,uid=1000,gid=1000,utf8,umask=0022,rw  0 2
 UUID=C480917680917022 /run/media/oguz/E ntfs-3g defaults,uid=1000,gid=1000,utf8,umask=0022,rw  0 2
+>  :exclamation: If you use manjaro with dual boot, you should close fast-startup,hibarnate on your Windows, otherwise, you have not a write permission for other partitions.
 ```
 sudo gedit /etc/hosts
 ```
