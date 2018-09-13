@@ -77,3 +77,4 @@ plugins=(
 )
 ## For Backup
 sudo pacman -S timeshift
+https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup
