@@ -18,7 +18,7 @@ sudo systemctl mask systemd-rfkill.socket systemd-rfkill.service
 sudo sensors-detect
 sudo systemctl enable thermald
 sudo systemctl start thermald
-trizen -S whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g
+trizen -S whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g  jdownloader2
 
 sudo gedit /etc/fstab 
 ```
