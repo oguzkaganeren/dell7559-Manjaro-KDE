@@ -10,28 +10,16 @@ sudo nano /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=! acpi_osi=\"Windows 2009\""
 ```
 update-grub
-sudo pacman -S --noconfirm --needed git
-sudo pacman -S --noconfirm --needed pulseaudio pulseaudio-alsa pavucontrol
-sudo pacman -S --noconfirm --needed aria2 git screenfetch ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli
-sudo pacman -S --noconfirm --needed ntp
+sudo pacman -S --noconfirm --needed git pulseaudio pulseaudio-alsa pavucontrol aria2 git screenfetch ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli ntp deepin-movie virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy lm_sensors thermald trizen
 sudo timedatectl set-ntp true
-sudo pacman -S --noconfirm --needed deepin-movie
-sudo pacman -S --noconfirm --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
-sudo pacman -S --noconfirm --needed tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy
 sudo systemctl mask systemd-rfkill.socket systemd-rfkill.service
-sudo pacman -S --noconfirm --needed lm_sensors && sudo sensors-detect
-sudo pacman -S --noconfirm --needed thermald
+sudo sensors-detect
 sudo systemctl enable thermald
 sudo systemctl start thermald
-yaourt -S whatsapp-web-desktop
-yaourt -S materia-theme
-yaourt -S opera chromium
-yaourt -S spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin
-sudo pacman -S papirus-icon-theme
-yaourt -S gedit
-sudo pacman -S ntfs-3g
+trizen -S whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g
+
 sudo gedit /etc/fstab 
 ```
 UUID=DAF6FE7CF6FE5869 /run/media/oguz/D ntfs-3g defaults,uid=1000,gid=1000,utf8,umask=0022,rw  0 2
