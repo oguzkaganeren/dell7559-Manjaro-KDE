@@ -18,7 +18,7 @@ sudo systemctl mask systemd-rfkill.socket systemd-rfkill.service
 sudo sensors-detect
 sudo systemctl enable thermald
 sudo systemctl start thermald
-trizen -S --noedit whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g  jdownloader2
+trizen -S --noedit whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g  jdownloader2 ttf-ms-fonts
 
 sudo gedit /etc/fstab 
 ```
@@ -28,6 +28,12 @@ UUID=C480917680917022 /run/media/oguz/E ntfs-3g defaults,uid=1000,gid=1000,utf8,
 ```
 sudo gedit /etc/hosts
 ```
+>  :exclamation: If you have a SSD, you should enable fstrim.
+```
+sudo systemctl enable fstrim.timer
+```
+sudo systemctl --failed
+sudo journalctl -p 3 -xb
 ```
 sudo pacman -S arc-kde kvantum-theme-arc
 ```
