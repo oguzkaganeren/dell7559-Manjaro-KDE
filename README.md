@@ -1,3 +1,12 @@
+>  :exclamation: 
+
+This repo has been archived. Our code is now hosted at
+
+https://gitlab.com/oguzkaganeren/dell7559-Manjaro-KDE/
+
+See you there!
+
+
 # dell7559-Manjaro-KDE
 
 manjaro-kde-18.0-rc1-stable-x86_64 or new version.
