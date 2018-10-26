@@ -1,6 +1,4 @@
->  :exclamation: 
-
-This repo has been archived. Our code is now hosted at
+>  :exclamation: This repo has been archived. Our code is now hosted at
 
 https://gitlab.com/oguzkaganeren/dell7559-Manjaro-KDE/
 
