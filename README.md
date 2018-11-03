@@ -2,7 +2,7 @@
 
 manjaro-kde-18.0-rc1-stable-x86_64 or new version.
 
-![Image](Screenshot_20181029_120907.png)
+![Image](https://github.com/oguzkaganeren/dell7559-Manjaro-KDE/blob/master/Screenshot_20181103_095750.png)
 
 ```
 sudo nano /etc/default/grub 
@@ -46,7 +46,7 @@ autospawn = yes
 ## Installing Nvidia Drivers
 Open System Settings or Manjaro Settings>Drivers, then click Auto Install Proprietary Drivers.
 
-![Image](Screenshot_20181029_114120.png)
+
 After Installing restart your computer. Done.
 ### If you want to edit your host file
 ```
