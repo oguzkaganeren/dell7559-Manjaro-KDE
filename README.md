@@ -48,6 +48,27 @@ Open System Settings or Manjaro Settings>Drivers, then click Auto Install Propri
 
 
 After Installing restart your computer. Done.
+## Firefox screen tearing during scrolling Issue
+```
+sudo gedit /etc/profile.d/kwin.sh
+```
+then put this in it,
+```
+#!/bin/sh
+
+export KWIN_TRIPLE_BUFFER=1
+```
+After that, 
+```
+sudo gedit ~/.config/kwinrc
+```
+Add those parameters at the bottom,
+
+```
+MaxFPS=60
+RefreshRate=60
+```
+Save it and reboot. Done.
 ### If you want to edit your host file
 ```
 sudo gedit /etc/hosts
