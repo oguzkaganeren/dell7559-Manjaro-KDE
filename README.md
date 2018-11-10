@@ -70,8 +70,8 @@ RefreshRate=60
 ```
 Save it and reboot. 
 Open firefox and 
->  about:config 
-then search > layers.acceleration.force-enabled 
+>  about:config;
+then search > layers.acceleration.force-enabled;
 it should be true.
 Done.
 ### If you want to edit your host file
