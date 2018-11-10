@@ -11,15 +11,15 @@ sudo nano /etc/default/grub
 ```
 update-grub
 ```
-## Fastest Mirror List
+### Fastest Mirror List
 ```
 sudo pacman-mirrors --fasttrack
 ```
-## Packages I use
+### Packages I use
 ```
 sudo pacman -S --noconfirm --needed git pulseaudio pulseaudio-alsa alsa-utils alsa-plugins pavucontrol aria2 screenfetch ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli ntp deepin-movie virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy lm_sensors thermald trizen intel-ucode xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape terminus-font gufw firejail create_ap
 ```
-## Power Settings
+### Power Settings
 ```
 sudo timedatectl set-ntp true
 sudo systemctl enable libvirtd.service
@@ -30,7 +30,7 @@ sudo systemctl enable thermald
 sudo systemctl start thermald
 ```
 About: https://forum.manjaro.org/t/howto-power-savings-setup-20180906/1445
-## INTEL - Enable Early Kernel Mode Setting for i915 module.
+### INTEL - Enable Early Kernel Mode Setting for i915 module.
 Edit /etc/mkinitcpio.conf file and in MODULES section add i915.
 ```
 # MODULES
@@ -44,11 +44,11 @@ Save and
 ```
 sudo mkinitcpio -P
 ```
-## Aur Packages I use
+### Aur Packages I use
 ```
 trizen -S --noedit whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g  jdownloader2 ttf-ms-fonts aptik-gtk ephifonts otf-exo
 ```
-## For Other Partitations
+### For Other Partitations
 If you have another partition(E, D etc.). You can mount it on the startup. Thus some applications which are using other partitions don't get an error.
 
 ```
@@ -70,12 +70,12 @@ UUID=C480917680917022 /run/media/oguz/E ntfs-3g defaults  0 0
 sudo gedit /etc/pulse/client.conf 
 autospawn = yes
 ```
-## Installing Nvidia Drivers
+### Installing Nvidia Drivers
 Open System Settings or Manjaro Settings>Drivers, then click Auto Install Proprietary Drivers.
 
 
 After Installing restart your computer. Done.
-## Firefox screen tearing during scrolling Issue
+### Firefox screen tearing during scrolling Issue
 ```
 sudo gedit /etc/profile.d/kwin.sh
 ```
@@ -109,11 +109,11 @@ sudo gedit /etc/hosts
 ```
 sudo systemctl enable fstrim.timer
 ```
-## Open Wifi Hotspot
+### Open Wifi Hotspot
 ```
 sudo create_ap wlp5s0 wlp5s0 MyAccessPoint password
 ```
-## Terminal PS1
+### Terminal PS1
 ```
 sudo gedit .bashrc
 ```
@@ -128,32 +128,32 @@ git_branch() {
 }
 ```
 ![Image](https://user-images.githubusercontent.com/5963437/46868048-baf1e580-ce2f-11e8-97aa-a02be1b8a066.png)
-## Latte-Dock
+### Latte-Dock
 If you want to panel which like first image, you should install latte-dock.
 ```
 sudo pacman -S latte-dock
 latte-dock
 ```
 You can edit the dock with right click on it.(You can add programs shortcut with drag-drop.)
-### For shortcut(Windows key) for the dock
+#### For shortcut(Windows key) for the dock
 Right click on the dock and Layout>Plasma, then open terminal
 ```
 kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.lattedock,/Latte,org.kde.LatteDock,activateLauncherMenu"
 qdbus org.kde.KWin /KWin reconfigure
 ```
 Done. After that, you can open application launcher with Windows key.
-## Installing Arc Theme
+### Installing Arc Theme
 ```
 sudo pacman -S arc-kde kvantum-theme-arc
 ```
 Open Kvantum manager and change theme with arc theme. After that change theme with kvantum at settings.
 
 
-## For Backup
+### For Backup
 ```
 sudo pacman -S timeshift
 ```
-## DVD/CD Mounting
+### DVD/CD Mounting
 If you have a external CD/DVD,
 ```
 sudo pacman -S k3b
