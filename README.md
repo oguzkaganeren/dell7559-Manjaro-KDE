@@ -11,7 +11,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=! acpi_osi=\"Windows 2009\" acpi_back
 ```
 update-grub
 sudo pacman-mirrors --fasttrack
-sudo pacman -S --noconfirm --needed git pulseaudio pulseaudio-alsa alsa-utils alsa-plugins pavucontrol aria2 git screenfetch ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli ntp deepin-movie virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy lm_sensors thermald trizen intel-ucode xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape terminus-font gufw firejail create_ap
+sudo pacman -S --noconfirm --needed git pulseaudio pulseaudio-alsa alsa-utils alsa-plugins pavucontrol aria2 screenfetch ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli ntp deepin-movie virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy lm_sensors thermald trizen intel-ucode xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape terminus-font gufw firejail create_ap
 sudo timedatectl set-ntp true
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
