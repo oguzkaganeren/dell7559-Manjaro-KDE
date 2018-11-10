@@ -7,7 +7,7 @@ manjaro-kde-18.0-rc1-stable-x86_64 or new version.
 ```
 sudo nano /etc/default/grub 
 ```
-> GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=! acpi_osi=\"Windows 2009\" acpi_backlight=vendor" ;
+> GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_osi=! acpi_osi=\"Windows 2009\" acpi_backlight=vendor i915.modeset=1" ;
 ```
 update-grub
 ```
@@ -30,6 +30,20 @@ sudo systemctl enable thermald
 sudo systemctl start thermald
 ```
 About: https://forum.manjaro.org/t/howto-power-savings-setup-20180906/1445
+## INTEL - Enable Early Kernel Mode Setting for i915 module.
+Edit /etc/mkinitcpio.conf file and in MODULES section add i915.
+```
+# MODULES
+# The following modules are loaded before any boot hooks are
+# run.  Advanced users may wish to specify all system modules
+# in this array.  For instance:
+#     MODULES=(piix ide_disk reiserfs)
+MODULES=(i915)
+```
+Save and
+```
+sudo mkinitcpio -P
+```
 ## Aur Packages I use
 ```
 trizen -S --noedit whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme gedit ntfs-3g  jdownloader2 ttf-ms-fonts aptik-gtk ephifonts otf-exo
