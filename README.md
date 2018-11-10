@@ -68,7 +68,12 @@ Add those parameters at the bottom,
 MaxFPS=60
 RefreshRate=60
 ```
-Save it and reboot. Done.
+Save it and reboot. 
+Open firefox and 
+>  about:config 
+then search > layers.acceleration.force-enabled 
+it should be true.
+Done.
 ### If you want to edit your host file
 ```
 sudo gedit /etc/hosts
@@ -114,7 +119,9 @@ Open Kvantum manager and change theme with arc theme. After that change theme wi
 
 
 ## For Backup
+```
 sudo pacman -S timeshift
+```
 ## DVD/CD Mounting
 If you have a external CD/DVD,
 ```
