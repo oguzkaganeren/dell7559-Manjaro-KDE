@@ -109,6 +109,47 @@ sudo gedit /etc/hosts
 ```
 sudo systemctl enable fstrim.timer
 ```
+### Loudness Equalizer
+```
+sudo gedit /etc/pulse/default.pa
+```
+You can show your audio list.
+```
+pacmd list-sinks | awk '/index/ || /name:/ || /alsa.card_name/ || /device.description/'
+```
+Edit the codes with your audio device and add your default.pa.
+```
+### Pulseaudio Dynamic Range Compression (LADSPA swh-plugins)
+
+# set primary audio as default
+# Note: We want primary audio first then switch to compressor audio at the end to avoid
+#         having no sound on bootup. Use the command to see your audio list.
+#         $ pacmd list-sinks | awk '/index/ || /name:/ || /alsa.card_name/ || /device.description/'
+#
+#         e.g mine is:  set-default-sink alsa_output.pci-0000_00_14.2.analog-stereo 
+#
+set-default-sink [your_primary_audio_here]
+
+## load ladspa module
+.ifexists module-ladspa-sink.so
+.nofail
+# mono
+# load-module module-ladspa-sink sink_name=compressor-mono plugin=sc4m_1916 label=sc4m control=1,1.5,401,-30,20,5,12
+# stereo
+load-module module-ladspa-sink sink_name=compressor-stereo plugin=sc4_1882 label=sc4 control=1,1.5,401,-30,20,5,12
+.fail
+.endif
+
+# set our custom compressor audio as default
+set-default-sink compressor-stereo
+```
+After save it.
+```
+pulseaudio --kill
+pulseaudio --start
+```
+
+https://github.com/gotbletu/shownotes/blob/master/pulseaudio-dynamic-range-compression.md
 ### Open Wifi Hotspot
 ```
 sudo create_ap wlp5s0 wlp5s0 MyAccessPoint password
