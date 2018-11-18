@@ -111,6 +111,8 @@ sudo systemctl enable fstrim.timer
 ```
 ### Loudness Equalizer
 ```
+sudo pacman -S swh-plugins
+
 sudo gedit /etc/pulse/default.pa
 ```
 You can show your audio list.
