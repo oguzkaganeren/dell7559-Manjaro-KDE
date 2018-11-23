@@ -201,6 +201,16 @@ If you have a external CD/DVD,
 ```
 sudo pacman -S k3b
 ```
+### PostgreSQL(for me)
+```
+sudo pacman -S postgresql
+sudo su postgres -l # or sudo -u postgres -i
+initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
+exit
+sudo systemctl enable --now postgresql.service
+sudo pacman -S pgadmin4
+
+```
 ## Some Errors and fixer
 ### Virtualbox
 #### NS_ERROR_FAILURE (0x80004005) Error
