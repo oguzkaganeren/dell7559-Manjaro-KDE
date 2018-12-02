@@ -46,7 +46,7 @@ sudo mkinitcpio -P
 ```
 ### Aur Packages I use
 ```
-trizen -S --noedit whatsapp-web-desktop materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme ntfs-3g  jdownloader2 ttf-ms-fonts ephifonts otf-exo
+trizen -S --noedit materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto  adobe-source-sans-pro-fonts android-studio woeusb-git visual-studio-code-bin papirus-icon-theme ntfs-3g  jdownloader2 ttf-ms-fonts ephifonts otf-exo
 ```
 ### For Other Partitations
 If you have another partition(E, D etc.). You can mount it on the startup. Thus some applications which are using other partitions don't get an error.
