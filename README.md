@@ -43,7 +43,7 @@ Change `#Color` to `Color` below the Music options.
 
 ### Aur Packages I use
 ```
-yay -S materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto adobe-source-sans-pro-fonts android-studio woeusb-git papirus-icon-theme ntfs-3g jdownloader2 ttf-ms-fonts ephifonts otf-exo thermald vscodium-bin
+yay -S materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto adobe-source-sans-pro-fonts android-studio woeusb-git papirus-icon-theme ntfs-3g jdownloader2 ttf-ms-fonts ephifonts otf-exo thermald vscodium-bin breeze-blurred-git otf-san-francisco
 ```
 ### Power Settings
 ```
