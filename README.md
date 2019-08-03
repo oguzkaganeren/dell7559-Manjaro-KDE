@@ -17,7 +17,11 @@ sudo pacman-mirrors --fasttrack
 ```
 ### Packages I use
 ```
-sudo pacman -S pavucontrol aria2 ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli deepin-movie virt-manager qemu vde2 ebtables bridge-utils openbsd-netcat tlp-rdw ethtool x86_energy_perf_policy yay xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape gufw create_ap gedit virtualbox fish pulseaudio-equalizer pulseaudio-equalizer-ladspa
+sudo pacman -S pavucontrol aria2 ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli deepin-movie virt-manager qemu vde2 ebtables bridge-utils openbsd-netcat tlp-rdw ethtool x86_energy_perf_policy yay xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape gufw create_ap gedit virtualbox fish pulseaudio-equalizer pulseaudio-equalizer-ladspa freeoffice
+```
+### Remove Kate(I don't like it). I use gedit
+```
+sudo pacman -Rns kate
 ```
 ### Change the shell
 ```
