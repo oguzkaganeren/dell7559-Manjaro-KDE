@@ -80,11 +80,7 @@ UUID=C480917680917022 /run/media/oguz/E ntfs-3g defaults  0 0
 ```
 
 >  :exclamation: If you use manjaro with dual boot, you should close fast-startup,hibarnate on your Windows, otherwise, you have not a write permission for other partitions.
->  :exclamation: When your headphone connects your computer then if you restart your computer or you connect it before startup, alsa not select your headphone and you should re-plug or you can fix it with;
-```
-sudo gedit /etc/pulse/client.conf 
-autospawn = yes
-```
+
 ### Installing Nvidia Drivers
 Open System Settings or Manjaro Settings>Drivers, then click Auto Install Proprietary Drivers.
 
