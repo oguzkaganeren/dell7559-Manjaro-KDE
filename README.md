@@ -31,6 +31,21 @@ sudo pacman -Rns kate
 chsh -s /usr/bin/fish
 curl -L https://get.oh-my.fish | fish
 ```
+### Touchpad tap-to-click
+sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf  
+```
+Section "InputClass"
+Identifier "touchpad"
+Driver "libinput"
+MatchIsTouchpad "on"
+Option "Tapping" "on"
+Option "NaturalScrolling" "off"
+Option "DisableWhileTyping" "on"
+Option "HorizontalScrolling" "on"
+Option "Tapping" "on"
+Option "TappingDrag" "on"
+EndSection
+```
 ### Power settings(optional)
 About: https://forum.manjaro.org/t/howto-power-savings-setup-20180906/1445
 
