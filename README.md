@@ -17,7 +17,7 @@ pamac update
 ```
 ### Packages I use(include aur packages)
 ```
-pamac install yay speedtest-cli telegram-desktop kdenlive inkscape create_ap virtualbox fish flameshot deepin-terminal neofetch gtop kolourpaint gedit materia-theme opera chromium ttf-font-awesome ttf-font-awesome-4 ttf-roboto android-studio woeusb-git jdownloader2 ttf-ms-fonts vscodium-bin breeze-blurred-git otf-san-francisco xdman gwe svr zettlr-bin fslint odio-appimage skypeforlinux-stable-bin posy-cursors all-repository-fonts ttf-wps-fonts keepassxc
+pamac install yay aria2 speedtest-cli telegram-desktop kdenlive inkscape create_ap virtualbox fish flameshot deepin-terminal neofetch gtop kolourpaint gedit materia-theme opera chromium ttf-font-awesome ttf-font-awesome-4 ttf-roboto android-studio woeusb-git jdownloader2 ttf-ms-fonts vscodium-bin breeze-blurred-git otf-san-francisco xdman gwe svr zettlr-bin fslint odio-appimage skypeforlinux-stable-bin posy-cursors all-repository-fonts ttf-wps-fonts keepassxc
 
 ```
 
