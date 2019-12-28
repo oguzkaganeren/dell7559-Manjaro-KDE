@@ -11,14 +11,17 @@ sudo nano /etc/default/grub
 ```
 update-grub
 ```
-### Fastest Mirror List
+### Update the system
 ```
-sudo pacman-mirrors --fasttrack 5
+pamac update
 ```
-### Packages I use
+### Packages I use(include aur packages)
 ```
-sudo pacman -S pavucontrol aria2 ttf-ubuntu-font-family rxvt-unicode unace unrar zip unzip sharutils uudeview arj cabextract speedtest-cli deepin-movie virt-manager qemu vde2 ebtables bridge-utils openbsd-netcat tlp-rdw ethtool x86_energy_perf_policy yay xf86-video-fbdev deepin-calculator telegram-desktop gimp kdenlive inkscape gufw create_ap gedit virtualbox fish pulseaudio-equalizer pulseaudio-equalizer-ladspa freeoffice
+pamac install yay speedtest-cli telegram-desktop kdenlive inkscape create_ap virtualbox fish flameshot deepin-terminal neofetch gtop kolourpaint gedit materia-theme opera chromium ttf-font-awesome ttf-font-awesome-4 ttf-roboto android-studio woeusb-git jdownloader2 ttf-ms-fonts vscodium-bin breeze-blurred-git otf-san-francisco xdman gwe svr zettlr-bin fslint odio-appimage skypeforlinux-stable-bin posy-cursors all-repository-fonts ttf-wps-fonts keepassxc
+
 ```
+
+
 ### Remove Kate(I don't like it). I use gedit
 ```
 sudo pacman -Rns kate
@@ -28,41 +31,11 @@ sudo pacman -Rns kate
 chsh -s /usr/bin/fish
 curl -L https://get.oh-my.fish | fish
 ```
+### Power settings(optional)
 About: https://forum.manjaro.org/t/howto-power-savings-setup-20180906/1445
-### INTEL - Enable Early Kernel Mode Setting for i915 module.
-Edit /etc/mkinitcpio.conf file and in MODULES section add i915.
-```
-# MODULES
-# The following modules are loaded before any boot hooks are
-# run.  Advanced users may wish to specify all system modules
-# in this array.  For instance:
-#     MODULES=(piix ide_disk reiserfs)
-MODULES=(i915)
-```
-Save and
-```
-sudo mkinitcpio -P
-```
-### Colorful Yay
-```
-sudo gedit /etc/pacman.conf
-```
-Change `#Color` to `Color` below the Music options.
 
-### Aur Packages I use
-```
-yay -S materia-theme opera chromium spotify ttf-font-awesome ttf-font-awesome-4 powerline-fonts ttf-roboto adobe-source-sans-pro-fonts android-studio woeusb-git papirus-icon-theme ntfs-3g jdownloader2 ttf-ms-fonts ephifonts otf-exo thermald vscodium-bin breeze-blurred-git otf-san-francisco
-```
-### Power Settings
-```
-sudo timedatectl set-ntp true
-sudo systemctl enable libvirtd.service
-sudo systemctl start libvirtd.service
-sudo systemctl mask systemd-rfkill.socket systemd-rfkill.service
-sudo sensors-detect
-sudo systemctl enable thermald
-sudo systemctl start thermald
-```
+
+
 ### For Other Partitations
 If you have another partition(E, D etc.). You can mount it on the startup. Thus some applications which are using other partitions don't get an error.
 
@@ -75,8 +48,7 @@ sudo gedit /etc/fstab
 ```
 Open your fstab config with the command. You should add codes similar to the following example. You should change UUID and /run/media/yourUserName/Partition.
 ```
-UUID=DAF6FE7CF6FE5869 /run/media/oguz/D ntfs-3g defaults  0 0
-UUID=C480917680917022 /run/media/oguz/E ntfs-3g defaults  0 0
+UUID=b336b98e-d0b5-4254-b6aa-9e66f85b0dfc /run/media/oguz/Files ext4 defaults  0 0
 ```
 
 >  :exclamation: If you use manjaro with dual boot, you should close fast-startup,hibarnate on your Windows, otherwise, you have not a write permission for other partitions.
@@ -124,6 +96,16 @@ sudo systemctl enable fstrim.timer
 ```
 sudo create_ap wlp5s0 wlp5s0 MyAccessPoint password
 ```
+## Optional
+### Fastest Mirror List
+```
+sudo pacman-mirrors --fasttrack 5
+```
+### Colorful Yay
+```
+sudo gedit /etc/pacman.conf
+```
+Change `#Color` to `Color` below the Music options.
 ### Terminal PS1
 ```
 sudo gedit .bashrc
@@ -153,6 +135,7 @@ kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "
 qdbus org.kde.KWin /KWin reconfigure
 ```
 Done. After that, you can open application launcher with Windows key.
+
 ### Installing Arc Theme
 ```
 sudo pacman -S arc-kde kvantum-theme-arc
